@@ -1,0 +1,13 @@
+index.php : 도커 이미지를 위한 스크립트
+DockerFile : index.php 스크립트를 포함한 도커 이미지 파일
+hpa-test.yaml : hpa test를 위해 만든 php-apache 이미지 기반의 deployment
+autoscaler.yaml : hpa-test deployment를 autoscaling해주는 hpa
+
+test 파일은 vim을 써서 읽어야함
+while true; do date +%r >> test | kubectl top pods >> test | kubectl get hpa >> test; sleep 1; done;
+명령어를 통해서 현재시간, 파드별 할당된 자원량, hpa 현재 상태를 1초를 주기로 기록했다.
+
+test1-2 : 0.1초의 term으로 쿼리를 발송하는 load-generator를 3분 주기로 하나씩 총 4개를 세팅 후 3분 주기로 하나씩 제거
+test2 : 0.1초의 term으로 쿼리를 발송하는 load-generator를 3분 주기로 2개씩 총 4개를 세팅 후 3분 주기로 2개씩 제거
+test3 : 1초의 term으로 쿼리를 발송하는 load-generator를 3분 주기로 하나씩 총 4개를 세팅 후 3분 주기로 하나씩 제거
+test4 : 1초의 term으로 쿼리를 발송하는 load-generator를 3분 주기로 2개씩 총 4개를 세팅 후 3분 주기로 2개씩 제거

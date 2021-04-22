@@ -11,3 +11,12 @@ test1-2 : 0.1초의 term으로 쿼리를 발송하는 load-generator를 3분 주
 test2 : 0.1초의 term으로 쿼리를 발송하는 load-generator를 3분 주기로 2개씩 총 4개를 세팅 후 3분 주기로 2개씩 제거
 test3 : 1초의 term으로 쿼리를 발송하는 load-generator를 3분 주기로 하나씩 총 4개를 세팅 후 3분 주기로 하나씩 제거
 test4 : 1초의 term으로 쿼리를 발송하는 load-generator를 3분 주기로 2개씩 총 4개를 세팅 후 3분 주기로 2개씩 제거
+
+test1-20 : test1-2와 같은 로드를 threshold 20% 로 설정했을 때
+test1-40 : test1-2와 같은 로드를 threshold 40% 로 설정했을 때
+test1-80 : test1-2와 같은 로드를 threshold 80% 로 설정했을 때
+test1-100 : test1-2와 같은 로드를 threshold 100% 로 설정했을 때
+test2-20 : test2와 같은 로드를 threshold 20% 로 설정했을 때
+test2-40 : test2와 같은 로드를 threshold 40% 로 설정했을 때
+test2-80 : test2와 같은 로드를 threshold 80% 로 설정했을 때
+test2-100 : test2와 같은 로드를 threshold 100% 로 설정했을 때
